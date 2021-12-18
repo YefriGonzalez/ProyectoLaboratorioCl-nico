@@ -1,0 +1,24 @@
+{
+  "name": "proyectolaboratorioclinico",
+  "version": "1.0.0",
+  "description": "Proyecto Laboratorio Clinico",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./api/index.js",
+    "dev": "nodemon ./api/index.js"
+  },
+  "keywords": [
+    "ejemplo",
+    "node",
+    "express",
+    "javascript"
+  ],
+  "author": "Yefri Gonzalez <yefrig00@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

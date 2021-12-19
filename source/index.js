@@ -17,7 +17,7 @@ app.get('/datosLaboratorio' , (req, res) =>{
 });
 
 //listening server
-app.listen(port,()=>console.log('hola mundo'));
+app.listen(port,()=>console.log('Servidor encendido'));
 app.get('/Administracion',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/administracion.html'));
 });

@@ -20,5 +20,4 @@ app.listen(port,()=>console.log('hola mundo'));
 app.get('/Administracion',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/administracion.html'));
 })
-//listening server
-app.listen(port,()=>console.log('hola mundo'));
+

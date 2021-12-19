@@ -21,3 +21,7 @@ app.listen(port,()=>console.log('hola mundo'));
 app.get('/Administracion',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/administracion.html'));
 });
+
+app.get('/NuevoExamen',(req,res)=>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/TipoExamen.html'))
+});

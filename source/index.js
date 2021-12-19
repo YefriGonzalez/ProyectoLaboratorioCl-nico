@@ -25,3 +25,9 @@ app.get('/Administracion',(req,res)=>{
 app.get('/NuevoExamen',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/TipoExamen.html'))
 });
+
+//Creando mi endpon para el area de secretaria
+app.get('/Secretaria',(req,res)=>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/AreaSecretaria.html'))
+});
+

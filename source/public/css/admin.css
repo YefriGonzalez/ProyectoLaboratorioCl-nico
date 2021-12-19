@@ -1,0 +1,81 @@
+body{
+    background: whitesmoke;
+}
+header{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#1b4f72;
+    font-size: 26px;
+    margin-top: 15%; 
+    margin-left: 100px; 
+}
+header, .buttons{
+    display: inline-block;
+}
+
+.buttons{
+    margin-left: 200px;
+}
+img{
+    width: 200px;
+}
+.consulta{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    background: white;
+    transition: opacity 1.5s;
+}
+submit{
+    background:#1b4f72 ;
+    color:white;
+}
+.form{
+    display: inline-block;
+}
+.form button{
+    width: 290px;
+    height: 70px;
+    background: #1b4f72;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form button:hover{
+    background: #3498db;
+    
+}
+#formbutton:hover .consulta{
+    visibility: visible;
+    display: block;
+    opacity: 1;
+}
+.consulta{
+    width: 250px;
+    height: 280px;
+    margin-left: 282px;
+    margin-top: -130px;
+    background: white;
+    color: black;
+    font-weight: 100px;
+
+}
+.consulta input{
+    width: 200px;
+    height: 30px;
+}
+.consulta input[type="submit"]{
+    background: #1b4f72;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    height: 35px;
+}
+.consulta input[type="submit"]:hover{
+    background: #3498db;
+}
+
+

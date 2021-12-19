@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración</title>
+    <link type="text/css" href="/css/admin.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Laboratorio Clínico</h1>
+        <h1>Patito</h1>
+        <img src="Imagenes/logo.png" alt="alt">
+        <h3>Bienvenido
+            <br>
+            Administrador: 
+        </h3>
+    </header>
+    <div class="buttons">
+        <nav class="form">
+            <button onclick="">Nuevo tipo de Examen</button>
+            <br>
+            <br>    
+            <button onclick="" class="sat">Reporte Mensual SAT</button>
+            <br>
+            <br>
+            <button onclick="" id="formbutton" class="financiero">Reporte Financiero
+                <form class="consulta">
+                    <h3>Fecha Inicial</h3>
+                    <input type="date" required="" name="fechaInicioFinanciero" >
+                    <br>
+                    <h3>Fecha Final</h3>
+                    <input type="date" required="" name="fechaFinFinanciero">
+                    <br>
+                    <br>
+                    <input type="submit" onclick="" value="Consultar">
+                </form>
+            </button>
+            
+            <br>
+            <br>
+            <button onclick="" id="formbutton" class="examenes">Reporte de Examenes
+                <form class="consulta">
+                    <h3>Fecha Inicial</h3>
+                    <input type="date" required="" name="fechaInicialExamenes">
+                    <h3>Fecha Final</h3>
+                    <input type="date" required="" name="fechaFinalExamenes">
+                    <br>
+                    <br>
+                    <input type="submit" onclick="" value="Consultar">
+                </form>
+            </button>
+                
+            
+        </nav>
+    </div>
+</body>
+</html>

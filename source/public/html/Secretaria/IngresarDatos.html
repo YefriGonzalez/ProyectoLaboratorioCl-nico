@@ -2,28 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingreso de datos</title>
-    <link href="css/EstilosSecretaria/EstiloIngresarDatos.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/EstilosSecretaria/EstiloIngresarDatos.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 <body>
     <header>        
-        <h1>Ingreso de datos del paciente</h1>
-        <img src="Imagenes/IngresoDatosSecre.jpg" alt="alt" >
+        <h1>Ingreso de datos</h1>
+        <img src="/Imagenes/Ingreso.jpg" alt="alt" >
     </header>
-    <div>
-        <form>
-            <h3>Usuario</h3>
-        <input type="text" id="user" required="" placeholder="Username"/>
+
+    <div class="divform">
+        <form class="form">
+            <h2>Datos del paciente</h2>
+            <h3>Nombre:</h3>
+        <input type="text" id="user" required="" placeholder="Ej.Melanni del Rosario Tzul Baquiax"/>
         <br>
+        <h3>Edad:</h3>
+        <input type="number" id="user" required="" placeholder="Numero"/>
         <br>
-        <h3>Contraseña</h3>
-        <input type="password" id="password" required="" placeholder="Password"/>
+        <h3>Sexo:</h3>
+        <input type="text" id="user" required="" placeholder="Femenino/Masculino"/>
         <br>
+        <h3>Fecha de Nacimiento:</h3>
+        <input type="date" id="user" required="" placeholder="DD/MM/YYY"/>
         <br>
-        <button onclick="login()">GUARDAR DATOS</button>
+        <h3>Direccion:</h3>
+        <input type="text" id="user" required="" placeholder="Ej.Totonicapan canton juchanep..."/>
+        <br>
+        <h3>Afiliacion No:</h3>
+        <input type="number" id="user" required="" placeholder="Numero"/>
+        <br>
+        <button onclick="GuardarDatosPaciente()">GUARDAR DATOS</button>
         </form>
     </div>
+    <script type="text/javascript" src="js/Secretaria.js"></script><!-- comment -->
 </body>
 </html>

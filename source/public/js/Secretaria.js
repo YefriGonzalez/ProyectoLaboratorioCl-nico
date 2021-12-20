@@ -11,3 +11,7 @@ function ImprimirResultadosPaciente(){
 function ModificarDatosPaciente(){
 
 };
+
+function GuardarDatosPaciente(){
+
+};

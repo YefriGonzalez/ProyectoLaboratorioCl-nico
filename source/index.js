@@ -53,6 +53,11 @@ app.get('/Secretaria',(req,res)=>{
 app.get('/Secretaria/IngresarDatos',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/IngresarDatos.html'))
 
-    console.log("Prerequisito: 1. A ver ingresado al area de secretaria 2.Boton Ingresar datos del paciente y realizar cobro")
+    console.log("Prerequisito: 1. A ver ingresado al área de secretaria 2.Boton Ingresar datos del paciente y realizar cobro")
 });
 
+//Creacion endpon para el área imprimir resultados
+app.get('/Secretaria/ImprimirResultados',(req,res)=>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/ImprimirResultados.html'))
+    console.log("Prerequisito:1.A ver ingresado al área de secretaria 2.Boton Imprimir resultados de paciente")
+});

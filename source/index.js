@@ -20,6 +20,7 @@ app.get('/datosLaboratorio' , (req, res) =>{
 app.listen(port,()=>console.log('Servidor encendido'));
 app.get('/Administracion',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/administracion.html'));
+    console.log("Prerequisito: Inicio de  sesion")
 });
 
 //Laboratorio
@@ -38,11 +39,12 @@ app.get('/resultadoExamen' , (req, res) =>{
 //Administración
 app.get('/NuevoExamen',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/TipoExamen.html'))
+    console.log("Prerequisito: 1.Inicio de sesion 2. Boton Nuevo tipo de examen")
 });
 
 //Creando mi endpon para el area de secretaria
 app.get('/Secretaria',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/AreaSecretaria.html'))
     
-    console.log("Prerequisito Inicio de seción")
+    console.log("Prerequisito Inicio de sesión")
 });

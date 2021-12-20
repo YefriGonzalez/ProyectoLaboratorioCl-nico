@@ -2,38 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingreso de datos</title>
-    <link href="css/EstilosSecretaria/EstiloIngresarDatos.css" rel="stylesheet" type="text/css"/>
-    
+    <link href="/css/EstilosSecretaria/EstiloIngresarDatos.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 <body>
     <header>        
-        <h1>Ingreso de datos del paciente</h1>
-        <img src="Imagenes/IngresoDatosSecre.jpg" alt="alt" >
+        <h1>Ingreso de datos</h1>
+        <img src="/Imagenes/Ingreso.jpg" alt="alt" >
     </header>
-    <div>
-        <form>
+
+    <div class="divform">
+        <form class="form">
             <h2>Datos del paciente</h2>
-            <br>
             <h3>Nombre:</h3>
         <input type="text" id="user" required="" placeholder="Ej.Melanni del Rosario Tzul Baquiax"/>
         <br>
         <h3>Edad:</h3>
-        <input type="text" id="password" required="" placeholder="Edad"/>
+        <input type="number" id="password" required="" placeholder="Edad"/>
         <br>
-        <h4>Sexo:</h4>
+        <h3>Sexo:</h3>
         <input type="text" id="user" required="" placeholder="Femenino/Masculino"/>
         <br>
-        <h5>Fecha de Nacimiento:</h5>
+        <h3>Fecha de Nacimiento:</h3>
         <input type="date" id="" required="" placeholder="DD/MM/YYY"/>
         <br>
-        <h6>Direccion:</h6>
+        <h3>Direccion:</h3>
         <input type="text" id="user" required="" placeholder="Ej.Totonicapan canton juchanep..."/>
         <br>
-        <h7>Afiliacion No:</h5>
-        <input type="date" id="" required="" placeholder="DD/MM/YYY"/>
+        <h3>Afiliacion No:</h3>
+        <input type="number" id="" required="" placeholder="Numero"/>
+        <br>
         <button onclick="GuardarDatosPaciente()">GUARDAR DATOS</button>
         </form>
     </div>

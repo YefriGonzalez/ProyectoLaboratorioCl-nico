@@ -61,3 +61,9 @@ app.get('/Secretaria/ImprimirResultados',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/ImprimirResultados.html'))
     console.log("Prerequisito:1.A ver ingresado al área de secretaria 2.Boton Imprimir resultados de paciente")
 });
+
+//Creacion endpon para el área modificar Datos
+app.get('/Secretaria/ModificarDatos',(req,res)=>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/ModificarDatos.html'))
+    console.log("Prerequisito:1.A ver ingresado al área de secretaria 2.Boton Modificar datos paciente")
+});

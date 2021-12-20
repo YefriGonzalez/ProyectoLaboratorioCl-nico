@@ -55,3 +55,4 @@ app.get('/Secretaria/IngresarDatos',(req,res)=>{
 
     console.log("Prerequisito: 1. A ver ingresado al area de secretaria 2.Boton Ingresar datos del paciente y realizar cobro")
 });
+

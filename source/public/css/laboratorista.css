@@ -12,12 +12,12 @@ img{
 }
 
 .datosIngreso{
-    width: 350px;
-    height: 500px;
-    background: rgb(53, 119, 195);
+    width: 400px;
+    height: 650px;
+    background: rgb(37, 143, 214);
     color: white;
     top: 50%;
-    left: 50%;
+    left: 18%;
     position: absolute;
     transform: translate(-50%, -50%);
     box-sizing: border-box;

@@ -12,9 +12,6 @@ app.get('/',(req,res) =>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/index.html'));
 });
 
-app.get('/datosLaboratorio' , (req, res) =>{
-    res.status(201).sendFile(path.join(__dirname,'/public/html/datosLaboratorio.html'));
-});
 
 //listening server
 app.listen(port,()=>console.log('Servidor encendido'));
@@ -25,17 +22,17 @@ app.get('/Administracion',(req,res)=>{
 
 //Laboratorio
 app.get('/datosLaboratorio' , (req, res) =>{
-    res.status(201).sendFile(path.join(__dirname,'/public/html/datosLaboratorio.html'));
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Laboratorista/datosLaboratorio.html'));
     console.log("Prerequisito: Inicio de sesión");
 });
 
 app.get('/ingresoDatos' , (req, res) =>{
-    res.status(201).sendFile(path.join(__dirname,'/public/html/ingresoDatos.html'));
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Laboratorista/ingresoDatos.html'));
     console.log("Prerequisito: 1.Inicio de sesion 2. LLenar campos 3. Boton guardar paciente")
 });
 
 app.get('/resultadoExamen' , (req, res) =>{
-    res.status(201).sendFile(path.join(__dirname,'/public/html/examenLab.html'));
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Laboratorista/examenLab.html'));
     console.log("Prerequisito: 1.Inicio de sesion 2. LLenar campos 3. Boton guardar resultados")
 });
 

@@ -20,5 +20,13 @@
   },
   "dependencies": {
     "express": "^4.17.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YefriGonzalez/ProyectoLaboratorioCl-nico.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YefriGonzalez/ProyectoLaboratorioCl-nico/issues"
+  },
+  "homepage": "https://github.com/YefriGonzalez/ProyectoLaboratorioCl-nico#readme"
 }

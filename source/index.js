@@ -12,6 +12,16 @@ app.get('/',(req,res) =>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/index.html'));
 });
 
+app.get('/datosLaboratorio' , (req, res) =>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/datosLaboratorio.html'));
+});
+
+//listening server
+app.listen(port,()=>console.log('Servidor encendido'));
+app.get('/Administracion',(req,res)=>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/administracion.html'));
+});
+
 //Laboratorio
 app.get('/datosLaboratorio' , (req, res) =>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/datosLaboratorio.html'));
@@ -25,7 +35,12 @@ app.get('/resultadoExamen' , (req, res) =>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/examenLab.html'));
 });
 
-app.listen(port,()=>console.log('hola mundo'));
-app.get('/Administracion',(req,res)=>{
-    res.status(201).sendFile(path.join(__dirname,'/public/html/administracion.html'));
+//Administración
+app.get('/NuevoExamen',(req,res)=>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/TipoExamen.html'))
+});
+
+//Creando mi endpon para el area de secretaria
+app.get('/Secretaria',(req,res)=>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/AreaSecretaria.html'))
 });

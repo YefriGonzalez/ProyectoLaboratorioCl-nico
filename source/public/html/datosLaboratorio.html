@@ -12,7 +12,7 @@
 <body>
     <!-- Barra de navegación-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+        <div class="container-fluid" >
           <a class="navbar-brand" href="#">Exámenes de laboratorio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -20,13 +20,13 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link active" aria-current="page"  href="#">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Ingreso de datos</a>
+                <a class="nav-link" onclick="abrirURL('ingresoDatos.html');" href="#">Ingreso de datos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Exámenes</a>
+                <a class="nav-link" onclick="abrirURL('datosLaboratorio.html', 'navbarTogglerDemo02');"href="#">Exámenes</a>
               </li>
             </ul>
             <form class="d-flex">
@@ -36,7 +36,7 @@
           </div>
         </div>
       </nav>
-      <!-- Contenido de usuario-->
+      <!-- Contenido de usuario ja-->
       <header>
         <h1>Laboratorio Clínico</h1>
         <h1>Patito</h1>
@@ -46,6 +46,8 @@
             Laboratorista: 
         </h3>
     </header>
-      <!-- Contenido de usuario-->
+      <!-- Para recargar la página-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="/public/js/confLab.js"></script>
 </body>
 </html>

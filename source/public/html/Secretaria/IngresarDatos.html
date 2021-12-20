@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingreso de datos</title>
     <link href="css/EstilosSecretaria/EstiloIngresarDatos.css" rel="stylesheet" type="text/css"/>
+    
 </head>
 <body>
     <header>        
@@ -14,15 +15,26 @@
     </header>
     <div>
         <form>
-            <h3>Usuario</h3>
-        <input type="text" id="user" required="" placeholder="Username"/>
+            <h2>Datos del paciente</h2>
+            <br>
+            <h3>Nombre:</h3>
+        <input type="text" id="user" required="" placeholder="Ej.Melanni del Rosario Tzul Baquiax"/>
         <br>
+        <h3>Edad:</h3>
+        <input type="text" id="password" required="" placeholder="Edad"/>
         <br>
-        <h3>Contraseña</h3>
-        <input type="password" id="password" required="" placeholder="Password"/>
+        <h4>Sexo:</h4>
+        <input type="text" id="user" required="" placeholder="Femenino/Masculino"/>
         <br>
+        <h5>Fecha de Nacimiento:</h5>
+        <input type="date" id="" required="" placeholder="DD/MM/YYY"/>
         <br>
-        <button onclick="login()">GUARDAR DATOS</button>
+        <h6>Direccion:</h6>
+        <input type="text" id="user" required="" placeholder="Ej.Totonicapan canton juchanep..."/>
+        <br>
+        <h7>Afiliacion No:</h5>
+        <input type="date" id="" required="" placeholder="DD/MM/YYY"/>
+        <button onclick="GuardarDatosPaciente()">GUARDAR DATOS</button>
         </form>
     </div>
 </body>

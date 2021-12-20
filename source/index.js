@@ -48,3 +48,10 @@ app.get('/Secretaria',(req,res)=>{
     
     console.log("Prerequisito Inicio de sesión")
 });
+
+//Creación endpon para el área de ingreso de datos
+app.get('/Secretaria/IngresarDatos',(req,res)=>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/IngresarDatos.html'))
+
+    console.log("Prerequisito: 1.A ver ingresado al area de secretaria 2.Boton Ingresar datos del paciente y realizar cobro")
+});

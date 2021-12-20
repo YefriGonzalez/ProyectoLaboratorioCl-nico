@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimir resultados del paciente</title>
+    <link href="/css/EstilosSecretaria/EstiloImprimirResultados.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header>
+        <h1>Imprimir Resultados</h1>
+        <img src="/Imagenes/IngresoDatosSecre.jpg" alt="alt" >
+
+    </header>
+    <div class="divform">
+
+            <form class="form">
+            <h2>RESULTADOS DE ANALISIS DE LABORATORIO</h2>
+             <h3>Nombre:</h3>
+            <input type="text" id="user" required="" placeholder="Ej.Melanni del Rosario Tzul Baquiax"/>
+            <br>
+            <h3>Edad:</h3>
+            <input type="number" id="user" required="" placeholder="Numero"/>
+            <br>
+            <h3>Sexo:</h3>
+            <input type="text" id="user" required="" placeholder="Femenino/Masculino"/>
+            <br>
+            <h3>Fecha de Nacimiento:</h3>
+            <input type="date" id="user" required="" placeholder="DD/MM/YYY"/>
+            <br>
+            <h3>Direccion:</h3>
+            <input type="text" id="user" required="" placeholder="Ej.Totonicapan canton juchanep..."/>
+            <br>
+            <h3>Afiliacion No:</h3>
+            <input type="number" id="user" required="" placeholder="Numero"/>
+            <br>
+            <button onclick="ImprimirResultados()">IMPRIMIR RESULTADOS</button>  
+        </form>
+    </div>
+    <script type="text/javascript" src="js/Secretaria.js"></script><!---->
+</body>
+</html>

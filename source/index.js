@@ -47,3 +47,25 @@ app.get('/Secretaria',(req,res)=>{
     
     console.log("Prerequisito Inicio de sesión")
 });
+<<<<<<< HEAD
+=======
+
+//Creación endpon para el área de ingreso de datos
+app.get('/Secretaria/IngresarDatos',(req,res)=>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/IngresarDatos.html'))
+
+    console.log("Prerequisito: 1. A ver ingresado al área de secretaria 2.Boton Ingresar datos del paciente y realizar cobro")
+});
+
+//Creacion endpon para el área imprimir resultados
+app.get('/Secretaria/ImprimirResultados',(req,res)=>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/ImprimirResultados.html'))
+    console.log("Prerequisito:1.A ver ingresado al área de secretaria 2.Boton Imprimir resultados de paciente")
+});
+
+//Creacion endpon para el área modificar Datos
+app.get('/Secretaria/ModificarDatos',(req,res)=>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/ModificarDatos.html'))
+    console.log("Prerequisito:1.A ver ingresado al área de secretaria 2.Boton Modificar datos paciente")
+});
+>>>>>>> 4d6dd34bfe3ab1546f729f98a8ec8c44da1f46e4

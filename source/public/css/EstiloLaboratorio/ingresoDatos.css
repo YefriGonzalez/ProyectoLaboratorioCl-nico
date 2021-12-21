@@ -13,7 +13,7 @@ img{
 
 .datosIngreso{
     width: 400px;
-    height: 660px;
+    height: 860px;
     background: rgb(30, 131, 199);
     color: black;
     top: 50%;
@@ -26,4 +26,15 @@ img{
 
 .form button{
     background: black;
+}
+
+select{
+    border-radius: 4%;
+    height: 3%;
+    width: 72%;
+}
+
+div{
+    border-radius: 4%;
+    width: 72%;
 }

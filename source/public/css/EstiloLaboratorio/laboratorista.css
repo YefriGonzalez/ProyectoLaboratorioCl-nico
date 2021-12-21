@@ -1,0 +1,35 @@
+header{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#1b4f72;
+    font-size: 26px;
+    margin-top: 10%; 
+    margin-left: 100px; 
+}
+
+header img{
+    width: 200px;
+    left: 15;
+}
+
+.datosIngreso{
+    width: 400px;
+    height: 650px;
+    background: rgb(37, 143, 214);
+    color: white;
+    top: 50%;
+    left: 68%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.diseño{
+    text-align: center;
+}
+
+ table, th, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse; 
+}

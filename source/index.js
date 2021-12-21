@@ -69,10 +69,10 @@ app.get('/Secretaria/ModificarDatos',(req,res)=>{
 
 app.get('/Administracion/CrearUsuario',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/Administracion/CrearUsuario.html'))
-
+    console.log("1. Iniciar Sesion 2.Boton crear usuario");
 });
 
 app.get('/Administracion/EditarUsuario',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/Administracion/EditarUsuario.html'));
-
+    console.log("1.Iniciar Sesion 2. Boton editar Usuario");
 });

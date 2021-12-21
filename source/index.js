@@ -15,7 +15,7 @@ app.get('/',(req,res) =>{
 //listening server
 app.listen(port,()=>console.log('Servidor encendido'));
 app.get('/Administracion',(req,res)=>{
-    res.status(201).sendFile(path.join(__dirname,'/public/html/administracion.html'));
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Administracion/administracion.html'));
     console.log("Prerequisito: Inicio de  sesion")
 });
 
@@ -36,8 +36,8 @@ app.get('/resultadoExamen' , (req, res) =>{
 });
 
 //Administración
-app.get('/NuevoExamen',(req,res)=>{
-    res.status(201).sendFile(path.join(__dirname,'/public/html/TipoExamen.html'))
+app.get('/Administracion/NuevoExamen',(req,res)=>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Administracion/TipoExamen.html'))
     console.log("Prerequisito: 1.Inicio de sesion 2. Boton Nuevo tipo de examen")
 });
 
@@ -65,4 +65,14 @@ app.get('/Secretaria/ImprimirResultados',(req,res)=>{
 app.get('/Secretaria/ModificarDatos',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/ModificarDatos.html'))
     console.log("Prerequisito:1.A ver ingresado al área de secretaria 2.Boton Modificar datos paciente")
+});
+
+app.get('/Administracion/CrearUsuario',(req,res)=>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Administracion/CrearUsuario.html'))
+
+});
+
+app.get('/Administracion/EditarUsuario',(req,res)=>{
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Administracion/EditarUsuario.html'));
+
 });

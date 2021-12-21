@@ -7,14 +7,14 @@ header{
     color:#1b4f72;
     font-size: 26px;
     margin-top: 15%; 
-    margin-left: 100px; 
+    margin-left: 50px; 
 }
 header, .buttons{
     display: inline-block;
 }
 
 .buttons{
-    margin-left: 200px;
+    margin-left: 140px;
 }
 img{
     width: 200px;

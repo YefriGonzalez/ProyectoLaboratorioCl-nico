@@ -3,7 +3,7 @@ header{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:#1b4f72;
     font-size: 26px;
-    margin-top: 8%; 
+    margin-top: 10%; 
     margin-left: -600px; 
 }
 
@@ -13,13 +13,17 @@ img{
 
 .datosIngreso{
     width: 400px;
-    height: 650px;
-    background: rgb(37, 143, 214);
-    color: white;
+    height: 660px;
+    background: rgb(30, 131, 199);
+    color: black;
     top: 50%;
-    left: 68%;
+    left: 70%;
     position: absolute;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px 30px;
+}
+
+.form button{
+    background: black;
 }

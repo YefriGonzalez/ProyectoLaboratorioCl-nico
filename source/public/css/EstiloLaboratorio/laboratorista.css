@@ -12,24 +12,4 @@ header img{
     left: 15;
 }
 
-.datosIngreso{
-    width: 400px;
-    height: 650px;
-    background: rgb(37, 143, 214);
-    color: white;
-    top: 50%;
-    left: 68%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    padding: 70px 30px;
-}
 
-.diseño{
-    text-align: center;
-}
-
- table, th, tr, td{
-    border: 1px solid black;
-    border-collapse: collapse; 
-}

@@ -2,14 +2,14 @@
 //Funcion que me permite mostrar en consola los datos ingresados
 function IngresoDatosPaciente(){
    
-    const Nombre=document.getElementById("Nombre").value;
-    const Edad=document.getElementById("Edad").value;
-    const Fecha_Nacimiento=document.getElementById("FechaNacimiento").value;
-    const Sexo=document.getElementById("Sexo").value;
-    const Direccion=document.getElementById("Direccion").value;
-    const Afiliacion=document.getElementById("Afiliacion").value;
-    const Telefono=document.getElementById("Telefono").value;
-    const Correo=document.getElementById("Correo").value;
+    const Nombre=document.getElementById("nombre").value;
+    const Edad=document.getElementById("edad").value;
+    const Fecha_Nacimiento=document.getElementById("fechaNacimiento").value;
+    const Sexo=document.getElementById("sexo").value;
+    const Direccion=document.getElementById("direccion").value;
+    const Afiliacion=document.getElementById("afiliacion").value;
+    const Telefono=document.getElementById("telefono").value;
+    const Correo=document.getElementById("correo").value;
     console.log(Nombre);
     console.log(Edad);
     console.log(Fecha_Nacimiento);

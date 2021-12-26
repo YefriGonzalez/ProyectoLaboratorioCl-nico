@@ -1,6 +1,12 @@
-console.log("hola");
+
 function nuevoExamen(){
-    location.href="/Administracion/NuevoExamen";
+    try {
+        location.href="/Administracion/NuevoExamen"    
+        response=> console.log('Sucess',response);
+    } catch (error) {
+        error =>console.error('Error: ',error)    
+    }
+    
     
 }
 function nuevoUsuario(){

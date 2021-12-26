@@ -1,7 +1,7 @@
 const express=require('express');
 const res = require('express/lib/response');
 const app=express();
-
+const { default: swal } = require("sweetalert");
 //server port
 const port=process.env.PORT || 5000;
 const path=require('path');
@@ -75,4 +75,24 @@ app.get('/Administracion/CrearUsuario',(req,res)=>{
 app.get('/Administracion/EditarUsuario',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/Administracion/EditarUsuario.html'));
     console.log("1.Iniciar Sesion 2. Boton editar Usuario");
+});
+
+
+const mysqlhost =process.env.mysqlhost || '192.168.1.25';
+const mysqluser=process.env.mysqluser || "LaboratorioPatito";
+const mysqlpass=process.env.mysqlpass || "LabPatito123.";
+
+//instanciar paquete
+const mysql=require('mysql');
+
+//realizar conexion
+const con=mysql.createConnection({
+    host: mysqlhost,
+    user: mysqluser,
+    password: mysqlpass
+});
+//prueba de conexion
+con.connect(function(err){
+    if (err) throw err;
+    console.log("Connected!");
 });

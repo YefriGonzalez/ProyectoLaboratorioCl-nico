@@ -1,12 +1,11 @@
-import swal from 'sweetalert';
 
 function nuevoExamen(){
     try {
-        location.href="/Administracion/NuevoExamen"  
-        swal("Hello world!");  
-        response=> console.log('Sucess',response);
+        location.href="/Administracion/NuevoExamen"   
+        swal("Hello world!");
+        console.log('Sucess',response);
     } catch (error) {
-        error =>console.error('Error: ',error)    
+        console.error('Error: ',error)    
     }
 }
 function nuevoUsuario(){

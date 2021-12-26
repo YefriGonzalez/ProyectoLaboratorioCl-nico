@@ -38,3 +38,26 @@ div{
     border-radius: 4%;
     width: 72%;
 }
+
+.menu-vertical {
+    background-color: #1b4f72;
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+
+}
+
+.menu-vertical > li:hover{
+    background-color: white;
+}
+
+.menu-vertical a{
+    display: block;
+    color: black;
+    padding: 15px 15px 15px 20px;
+}
+
+.dropdown-menu dropdown-menu-dark{
+    display: block;
+}

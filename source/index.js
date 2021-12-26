@@ -44,7 +44,7 @@ app.get('/Administracion/NuevoExamen',(req,res)=>{
 //Creando mi endpon para el area de secretaria
 app.get('/Secretaria',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/AreaSecretaria.html'))
-    
+
     console.log("Prerequisito Inicio de sesión")
 });
 

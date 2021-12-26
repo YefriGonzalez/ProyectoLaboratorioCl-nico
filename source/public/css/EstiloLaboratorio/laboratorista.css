@@ -4,12 +4,35 @@ header{
     color:#1b4f72;
     font-size: 26px;
     margin-top: 10%; 
-    margin-left: 100px; 
+    margin-left: 100px;
 }
 
 header img{
     width: 200px;
-    left: 15;
+    left: 60px;
+}
+
+.menu-vertical {
+    background-color: #1b4f72;
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+
+}
+
+.menu-vertical > li:hover{
+    background-color: white;
+}
+
+.menu-vertical a{
+    display: block;
+    color: black;
+    padding: 15px 15px 15px 20px;
+}
+
+.dropdown-menu dropdown-menu-dark{
+    display: block;
 }
 
 

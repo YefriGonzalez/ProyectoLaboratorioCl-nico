@@ -13,10 +13,10 @@ img{
 
 .datosIngreso{
     width: 400px;
-    height: 860px;
+    height: 1200px;
     background: rgb(30, 131, 199);
     color: black;
-    top: 50%;
+    top: 110%;
     left: 70%;
     position: absolute;
     transform: translate(-50%, -50%);

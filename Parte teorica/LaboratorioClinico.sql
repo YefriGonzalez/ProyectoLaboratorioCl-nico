@@ -1,4 +1,4 @@
-CREATE USER 'LaboratorioPatito'@'localhost' IDENTIFIED BY 'LabPatito123.';
+CREATE USER 'LaboratorioPatito'@'%' IDENTIFIED BY 'LabPatito123.';
 
 CREATE DATABASE LaboratorioPatito;
 USE LaboratorioPatito;
@@ -72,7 +72,9 @@ CREATE TABLE prueba(
 	CONSTRAINT FK_TO_EXAMEN_PRUEBA FOREIGN KEY(tipo) REFERENCES examen(tipo) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-GRANT ALL PRIVILEGES  ON LaboratorioPatito.* TO 'LaboratorioPatito'@'localhost';
+GRANT ALL PRIVILEGES  ON LaboratorioPatito.* TO 'LaboratorioPatito'@'%';
+ALTER USER 'LaboratorioPatito'@'%' IDENTIFIED WITH mysql_native_password BY 'LabPatito123.';
+FLUSH PRIVILEGES;
 
 /*Tipo usuarios:  1: Administracion 2: Laboratorio 3: Secretaria*/
 INSERT INTO usuario(nombre_usuario,contraseña,tipo,estado,correo,nombre) VALUES('Yefri1000','2021yefri','1','1','yefrig00@gmail.com','Yefri González');

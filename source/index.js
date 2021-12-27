@@ -84,7 +84,7 @@ const mysqldatabase=process.env.database || "LaboratorioPatito"
 //instanciar paquete
 const mysql=require('mysql');
 const { Console } = require('console');
-/*
+
 //realizar conexion 
 const connection=mysql.createConnection({
     host: mysqlhost,
@@ -103,4 +103,3 @@ connection.connect(function (err){
 });
 
 module.exports = {connection}
-*/

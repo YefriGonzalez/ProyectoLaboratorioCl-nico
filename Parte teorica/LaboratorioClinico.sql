@@ -72,5 +72,11 @@ CREATE TABLE prueba(
 	CONSTRAINT FK_TO_EXAMEN_PRUEBA FOREIGN KEY(tipo) REFERENCES examen(tipo) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-GRANT USAGE,INSERT,DELETE,UPDATE,SELECT ON LaboratorioPatito.* TO 'LaboratorioPatito'@'localhost';
+GRANT ALL PRIVILEGES  ON LaboratorioPatito.* TO 'LaboratorioPatito'@'localhost';
 
+/*Tipo usuarios:  1: Administracion 2: Laboratorio 3: Secretaria*/
+INSERT INTO usuario(nombre_usuario,contraseña,tipo,estado,correo,nombre) VALUES('Yefri1000','2021yefri','1','1','yefrig00@gmail.com','Yefri González');
+
+INSERT INTO usuario(nombre_usuario,No_Colegiado,contraseña,tipo,estado,correo,nombre) VALUES('Annelis','3245','2021Annelis','2','1','Annelis@gmail.com','Annelis Sacalxot');
+
+INSERT INTO usuario(nombre_usuario,contraseña,tipo,estado,correo,nombre) VALUES('MelanniTzul','2021Mel','3','1','melannni@gmail.com','Melanni Tzul');

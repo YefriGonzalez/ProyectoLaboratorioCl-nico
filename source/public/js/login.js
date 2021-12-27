@@ -1,5 +1,6 @@
 const mysql=require('mysql'); 
-const {connection}=require("../../index")
+const swal=require("sweetalert");
+const {connection}=require("./index");
 async function login(){
     try{
         const user=document.getElementById("user").value;
@@ -12,5 +13,4 @@ async function login(){
         console.log(error)
         alert(error)
     }
-
 }

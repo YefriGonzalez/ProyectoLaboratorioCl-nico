@@ -21,10 +21,7 @@
   "dependencies": {
     "express": "^4.17.2",
     "mysql": "^2.18.1",
-<<<<<<< HEAD
-=======
     "mysql2": "^2.3.3",
->>>>>>> b44f9dc62fbb20126dfb8203ff84d39a4e0f69d1
     "sweetalert": "^2.1.2"
   },
   "repository": {

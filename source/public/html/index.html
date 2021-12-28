@@ -21,19 +21,18 @@
         </h3>
     </header>
  <div class="divform">
-    <form class="form">
+    <form class="form" action="verify" method="POST">
         <img src="Imagenes/user.png" alt="alt" class="userimg">
         <h3>Usuario</h3>
-        <input type="text" id="user" required="" placeholder="Username"/>
+        <input type="text" name="username" required="" placeholder="Username"/>
         <br>
         <br>
         <h3>Contraseña</h3>
-        <input type="password" id="password" required="" placeholder="Password"/>
+        <input type="password" name="password" required="" placeholder="Password"/>
         <br>
         <br>
-        <button onclick="login()">INICIAR SESIÓN</button>
+        <button>INICIAR SESIÓN</button>
     </form>
  </div>
- <script src="js/login.js"></script>
 </body>
 </html>

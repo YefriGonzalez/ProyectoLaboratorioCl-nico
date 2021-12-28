@@ -1,12 +1,23 @@
 const express=require('express');
 const res = require('express/lib/response');
 const app=express();
-const { default: swal } = require("sweetalert");
+const connection=require('./Connection');
+const bodyParser = require('body-parser');
+const Swal=require('sweetalert2');
 //server port
 const port=process.env.PORT || 5000;
 const path=require('path');
-app.use(express.static(__dirname+'/public/'));
+const expressSession = require('express-session')
+const { Console } = require('console');
+app.use(expressSession({
+	secret: 'secret',
+	resave: true,
+	saveUninitialized: true
+}));
+app.use(bodyParser.urlencoded({extended : true}));
+app.use(bodyParser.json());
 
+app.use(express.static(__dirname+'/public/'));
 //routes
 app.get('/',(req,res) =>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/index.html'));
@@ -17,6 +28,7 @@ app.listen(port,()=>console.log('Servidor encendido'));
 app.get('/Administracion',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/Administracion/administracion.html'));
     console.log("Prerequisito: Inicio de  sesion")
+    
 });
 
 //Laboratorio
@@ -76,30 +88,47 @@ app.get('/Administracion/EditarUsuario',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/Administracion/EditarUsuario.html'));
     console.log("1.Iniciar Sesion 2. Boton editar Usuario");
 });
-// 172.17.0.2
-const mysqlhost =process.env.mysqlhost || '172.17.0.2';
-const mysqluser=process.env.mysqluser || "LaboratorioPatito";
-const mysqlpass=process.env.mysqlpass || "LabPatito123.";
-const mysqldatabase=process.env.database || "LaboratorioPatito"
-//instanciar paquete
-const mysql=require('mysql');
-const { Console } = require('console');
+module.exports=connection;
 
-/*//realizar conexion 
-const connection=mysql.createConnection({
-    host: mysqlhost,
-    user: mysqluser,
-    password: mysqlpass,
-    database: mysqldatabase
-});
 
-connection.connect(function (err){
-    if(err){
-        console.log(err);
-        console.log("NOT Connected");
-    }else{
-        console.log("Connected DB!")
+app.post('/Verify',function(req,res){
+    const user=req.body.username;
+    const pass=req.body.password;
+    if(user && pass){
+        const consulta='SELECT *FROM usuario WHERE password=? AND nombre_usuario= ?';
+        connection.query(consulta,[pass,user],function(error,results,fields){
+            if(error){
+                console.log(error);
+            }else{
+                if(results.length>0){
+                    console.log(results[0].tipo);
+                    if(results[0].tipo==1 && results[0].estado==1){
+                        res.redirect('/Administracion');
+                    }else if(results[0].tipo==2 && results[0].estado==1){
+                        res.redirect('/datosLaboratorio');
+                    }else if(results[0].tipo==3 && results[0].estado==1){
+                        res.redirect('/Secretaria');
+                    }else{
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Contraseña o Usuario incorrectos',
+                        });
+                        res.redirect("/")
+                    }
+                }else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Contraseña o Usuario incorrectos',
+                    });
+                    res.redirect('/');
+                }
+            }
+            res.end();
+        });
+    }else {
+        Swal("Porfavor Ingrese un usuario y contraseña");
+        res.end();
     }
 });
-
-module.exports = {connection}*/

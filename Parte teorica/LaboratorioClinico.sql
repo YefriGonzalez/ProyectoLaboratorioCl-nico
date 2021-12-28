@@ -6,7 +6,7 @@ USE LaboratorioPatito;
 CREATE TABLE usuario(
 	nombre_usuario VARCHAR(25) NOT NULL,
 	No_Colegiado VARCHAR(20),
-	contraseña VARCHAR(20) NOT NULL,
+	password VARCHAR(20) NOT NULL,
 	tipo INT NOT NULL,
 	estado BOOLEAN NOT NULL,
 	correo VARCHAR(20) NOT NULL,
@@ -23,6 +23,9 @@ CREATE TABLE cliente(
 	fecha_nacimiento DATE NOT NULL,
 	telefono INT NOT NULL,
 	correo VARCHAR(20),
+	POS INT NOT NULL,
+	medico VARCHAR(20),
+	CONSTRAINT PK_TO_MEDICO FOREIGN KEY(medico) REFERENCES medico(no_colegiado),
 	CONSTRAINT PK_CLIENTE PRIMARY KEY(afiliacion)
 );
 
@@ -77,8 +80,8 @@ ALTER USER 'LaboratorioPatito'@'%' IDENTIFIED WITH mysql_native_password BY 'Lab
 FLUSH PRIVILEGES;
 
 /*Tipo usuarios:  1: Administracion 2: Laboratorio 3: Secretaria*/
-INSERT INTO usuario(nombre_usuario,contraseña,tipo,estado,correo,nombre) VALUES('Yefri1000','2021yefri','1','1','yefrig00@gmail.com','Yefri González');
+INSERT INTO usuario(nombre_usuario,password,tipo,estado,correo,nombre) VALUES('Yefri1000','2021yefri','1','1','yefrig00@gmail.com','Yefri González');
 
-INSERT INTO usuario(nombre_usuario,No_Colegiado,contraseña,tipo,estado,correo,nombre) VALUES('Annelis','3245','2021Annelis','2','1','Annelis@gmail.com','Annelis Sacalxot');
+INSERT INTO usuario(nombre_usuario,No_Colegiado,password,tipo,estado,correo,nombre) VALUES('Annelis','3245','2021Annelis','2','1','Annelis@gmail.com','Annelis Sacalxot');
 
-INSERT INTO usuario(nombre_usuario,contraseña,tipo,estado,correo,nombre) VALUES('MelanniTzul','2021Mel','3','1','melannni@gmail.com','Melanni Tzul');
+INSERT INTO usuario(nombre_usuario,password,tipo,estado,correo,nombre) VALUES('MelanniTzul','2021Mel','3','1','melannni@gmail.com','Melanni Tzul');

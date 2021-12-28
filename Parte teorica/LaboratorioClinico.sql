@@ -23,6 +23,9 @@ CREATE TABLE cliente(
 	fecha_nacimiento DATE NOT NULL,
 	telefono INT NOT NULL,
 	correo VARCHAR(20),
+	POS INT NOT NULL,
+	medico VARCHAR(20),
+	CONSTRAINT PK_TO_MEDICO FOREIGN KEY(medico) REFERENCES medico(no_colegiado),
 	CONSTRAINT PK_CLIENTE PRIMARY KEY(afiliacion)
 );
 

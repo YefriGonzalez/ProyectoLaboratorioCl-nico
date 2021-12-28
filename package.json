@@ -2,6 +2,20 @@
   "name": "proyectolaboratorioclinico",
   "version": "1.0.0",
   "description": "Proyecto Laboratorio Clinico",
+  "contributors": [
+    {
+      "name": "Yefri González",
+      "email": "yefrig00@gmail.com"
+    },
+    {
+      "name": "Melanni Tzul",
+      "email": "melannitzul@gmail.com"
+    },
+    {
+      "name": "Annelis Sacalxot",
+      "email": "annejysch@gmail.com"
+    }
+  ],
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./source/index.js",
@@ -20,9 +34,10 @@
   },
   "dependencies": {
     "express": "^4.17.2",
+    "express-session": "^1.17.2",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
-    "sweetalert": "^2.1.2"
+    "sweetalert2": "^11.3.0"
   },
   "repository": {
     "type": "git",

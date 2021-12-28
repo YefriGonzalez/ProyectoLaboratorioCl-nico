@@ -85,7 +85,7 @@ const mysqldatabase=process.env.database || "LaboratorioPatito"
 const mysql=require('mysql');
 const { Console } = require('console');
 
-//realizar conexion 
+/*//realizar conexion 
 const connection=mysql.createConnection({
     host: mysqlhost,
     user: mysqluser,
@@ -102,4 +102,4 @@ connection.connect(function (err){
     }
 });
 
-module.exports = {connection}
+module.exports = {connection}*/

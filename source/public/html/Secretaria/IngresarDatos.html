@@ -13,19 +13,19 @@
     </header>
 
     <div class="divform">
-        <form class="form">
+        <form class="form" method="POST" action="IngresarPaciente">
             <h2>Datos del paciente</h2>
             <h3>Nombre:</h3>
-        <input type="text" id="nombre" required="" placeholder="Ej.Melanni del Rosario Tzul Baquiax"/>
+        <input type="text" name="nombre" required="" placeholder="Ej.Melanni del Rosario Tzul Baquiax"/>
         <br>
         <h3>Edad:</h3>
-        <input type="number" id="edad" required="" placeholder="Numero"/>
+        <input type="number" name="edad" required="" placeholder="Numero"/>
         <br>
         <h3>Fecha de Nacimiento:</h3>
-        <input type="date" id="fechaNacimiento" required="" placeholder="DD/MM/YYY"/>
+        <input type="date" name="fechaNacimiento" required="" placeholder="DD/MM/YYY"/>
         <br>
         <h3>Sexo:</h3>
-        <select name="Sexo" id="sexo">
+        <select name="sexo" id="sexo">
             <option value="1">Femenino</option>
             <option value="2">Masculino</option>
             <option value="3">Indefinido</option>
@@ -52,9 +52,8 @@
         <br>
         <label>HECES COMPLETO<input type="checkbox" name="heces" value="3"></label>
         <br>    
-        <button onclick="IngresoDatosPaciente()">GUARDAR DATOS</button>
+        <button >GUARDAR DATOS</button>
         </form>
     </div>
-    <script type="text/javascript" src="/js/Secretaria.js"></script><!-- comment -->
 </body>
 </html>

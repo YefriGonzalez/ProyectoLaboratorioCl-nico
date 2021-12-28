@@ -2,7 +2,6 @@
 function nuevoExamen(){
     try {
         location.href="/Administracion/NuevoExamen"   
-        swal("Hello world!");
         console.log('Sucess',response);
     } catch (error) {
         console.error('Error: ',error)    

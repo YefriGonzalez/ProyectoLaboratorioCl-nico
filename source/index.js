@@ -1,5 +1,3 @@
-
-
 const express=require('express');
 const res = require('express/lib/response');
 const app=express();
@@ -58,15 +56,13 @@ app.get('/Administracion/NuevoExamen',(req,res)=>{
 //Creando mi endpon para el area de secretaria
 app.get('/Secretaria',(req,res)=>{
     res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/AreaSecretaria.html'))
-
     console.log("Prerequisito Inicio de sesión")
 });
 
-//Creación endpon para el área de ingreso de datos
+//Creación endpoint para el área de ingreso de datos
 app.get('/Secretaria/IngresarDatos',(req,res)=>{
-    res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/IngresarDatos.html'))
-
-    console.log("Prerequisito: 1. A ver ingresado al área de secretaria 2.Boton Ingresar datos del paciente y realizar cobro")
+    res.status(201).sendFile(path.join(__dirname,'/public/html/Secretaria/IngresarDatos.html'));
+    console.log("Prerequisito: 1. Haber ingresado al área de secretaria 2.Boton Ingresar datos del paciente y realizar cobro")
 });
 
 //Creacion endpon para el área imprimir resultados
@@ -91,8 +87,6 @@ app.get('/Administracion/EditarUsuario',(req,res)=>{
     console.log("1.Iniciar Sesion 2. Boton editar Usuario");
 });
 module.exports=connection;
-
-
 app.post('/Verify',function(req,res){
     const user=req.body.username;
     const pass=req.body.password;
@@ -103,7 +97,6 @@ app.post('/Verify',function(req,res){
                 console.log(error);
             }else{
                 if(results.length>0){
-                    console.log(results[0].tipo);
                     if(results[0].tipo==1 && results[0].estado==1){
                         res.redirect('/Administracion');
                     }else if(results[0].tipo==2 && results[0].estado==1){
@@ -134,3 +127,28 @@ app.post('/Verify',function(req,res){
         res.end();
     }
 });
+
+app.post('/IngresarPaciente',function(req,res){
+    const nombre=req.body.nombre;
+    const edad=req.body.edad;
+    const fecha=req.body.fechaNacimiento;
+    const sexo=req.body.sexo;
+    const direccion=req.body.direccion;
+    const afiliacion=req.body.afiliacion;
+    const telefono=req.body.telefono;
+    const correo=req.body.Correo;
+    const medico=req.body.medico;
+    const hematologia=req.body.hematologia;
+    const orina=req.body.orina;
+    const heces=req.body.heces;
+    const pos=req.body.POS;
+    if(afiliacion){
+        if(hematologia.checked){
+            const insert='INSERT INTO examen'
+        }
+    }
+    console.log(hematologia);
+    if(nombre && edad && fecha&& sexo&& direccion && afiliacion && telefono && pos){
+        const insert='INSERT INTO cliente(nombre,edad,fecha,sexo,direccion,afiliacion,telefono,correo,)';
+    }
+})

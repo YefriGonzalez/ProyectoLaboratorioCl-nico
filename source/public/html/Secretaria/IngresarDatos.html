@@ -32,15 +32,26 @@
         </select>
         <br>
         <h3>Dirección:</h3>
-        <input type="text" id="dirección" required="" placeholder="Ej.Totonicapan canton juchanep..."/>
+        <input type="text" name="dirección" required="" placeholder="Ej.Totonicapan canton juchanep..."/>
         <br>
         <h3>Afiliación No:</h3>
-        <input type="number" id="afiliacion" required="" placeholder="Numero"/>
+        <input type="number" name="afiliacion" required="" placeholder="Numero"/>
         <br>
         <h3>Teléfono:</h3>
-        <input type="number" id="telefono" required="" placeholder="Numero"/>
+        <input type="number" name="telefono" required="" placeholder="Numero"/>
         <h3>Correo:</h3>
-        <input type="email" placeholder="Correo" user="Correo" id="correo"/>
+        <input type="email" placeholder="Correo"  name="correo"/>
+        <h3>No Colegiado Medico:</h3>
+        <input type="number" placeholder="1231" name="medico">
+        <h3>POS</h3>
+        <input type="number" placeholder="9392932"  requerid="" name="POS">
+        <h3>Tipos de examen: </h3>
+        <label>HEMATOLOGIA <input type="checkbox" name="hematologia" value="1"></label>
+        <br>
+        <label>ORINA COMPLETA<input type="checkbox" name="orina" value="2"></label>
+        <br>
+        <label>HECES COMPLETO<input type="checkbox" name="heces" value="3"></label>
+        <br>    
         <button onclick="IngresoDatosPaciente()">GUARDAR DATOS</button>
         </form>
     </div>
